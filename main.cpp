@@ -119,7 +119,7 @@ int main()
 
 
     Q.Show();
-//weerdwweed
+//weerdwweedw
 //    //извлечение элемента
 //    Q.Extract();
 
