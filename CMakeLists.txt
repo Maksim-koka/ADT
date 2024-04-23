@@ -13,4 +13,6 @@ add_executable(oop_new main.cpp
         Queue.h
         Queue.h
         Stack_2.h
-        Stack_2.h)
+        Stack_2.h
+        Priority_Queue.h
+        Priority_Queue.h)

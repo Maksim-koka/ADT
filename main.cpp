@@ -4,6 +4,8 @@
 #include "DoubleLink.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "Stack_2.h"
+#include "Priority_Queue.h"
 
 using namespace std;
 
@@ -63,28 +65,67 @@ int main()
 //
 //    cout << kst << endl;
 
-    Stack<int> myStack;
 
-    cout << "Size: " << myStack.size() << endl;
+//    Stack<int> myStack;
+//
+//    cout << "Size: " << myStack.size() << endl;
+//
+//    for (int value = 0; value < 10; value += 1){
+//        myStack.push(value);
+//    }
+//
+//    cout << "Size: " << myStack.size() << endl;
+//
+//    while (!myStack.isEmpty()){
+//        cout << myStack.peek() << " ";
+//        myStack.pop();
+//    }
+//    cout << endl;
 
-    for (int value = 0; value < 10; value += 1){
-        myStack.push(value);
-    }
-
-    cout << "Size: " << myStack.size() << endl;
 
 
+//    Queue<int> myQueue;
+//
+//    for (int value = 0; value < 10; value ++){
+//        myQueue.Enqueue(value);
+//    }
+//
+//    while (!myQueue.isEmpty()){
+//        cout << myQueue.peek() << " ";
+//        myQueue.Dequeue();
+//    }
 
-    Queue<int> myQueue;
 
-    for (int value = 0; value < 10; value ++){
-        myQueue.Enqueue(value);
-    }
+//    Stack_2<10, int> myStack2;
+//
+//    for (int value = 0; value < 10; value += 1){
+//        myStack2.push(value);
+//    }
+//
+//    while (!myStack2.isEmpty()){
+//        cout << myStack2.peek() << " ";
+//        myStack2.pop();
+//    }
+//    cout << endl;
 
-    while (!myQueue.isEmpty()){
-        cout << myQueue.peek() << " ";
-        myQueue.Dequeue();
-    }
+    Priority_Queue Q(10);
 
+    Q.Add(4,0);
+    Q.Add(1,1);
+    Q.Add(7,0);
+    Q.Add(2,2);
+    Q.Add(8,0);
+    Q.Add(3,1);
+
+
+    Q.Show();
+//
+//    //извлечение элемента
+//    Q.Extract();
+
+    Q.delet(8);
+
+    //показ очереди
+    Q.Show();
     return 0;
 }

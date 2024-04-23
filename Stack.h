@@ -8,8 +8,6 @@ class Stack{
 private:
 
     DoubleLink<T> List;
-    T* stack = nullptr;
-    int top = -1;
 
 public:
 
@@ -21,12 +19,12 @@ public:
         List.pop_back();
     }
 
-    T& peek(){
-        return stack[top];
+    T peek(){
+        return List.index(List.GetSize() - 1);
     }
 
     bool isEmpty(){
-        return top == -1;
+        return !List.isEmpty();
     }
 
     int size(){

@@ -2,34 +2,36 @@
 // Created by Msksim on 18.04.2024.
 //
 
+#include <iostream>
 
-template <typename T>
-class Stack{
+template<size_t SIZE, typename T>
+class Stack_2{
 private:
-
-    T* stack = nullptr;
+    T stack[SIZE] = {};
     int top = -1;
-
 public:
 
-    void push(const T& value){
-        List.put_end(value);
+    void push(T value) {
+        top++;
+        stack[top] = value;
     }
 
-    void pop(){
-        List.pop_back();
+    void pop() {
+        top--;
     }
 
-    T& peek(){
+    T& peek() {
         return stack[top];
     }
 
-    bool isEmpty(){
-        return top == -1;
+    bool isEmpty() {
+        if (top == -1) return true;
+        return false;
     }
 
-    int size(){
-        return List.GetSize();
+    bool isFull() {
+        if (top == SIZE - 1) return true;
+        return false;
     }
 };
 
